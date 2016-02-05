@@ -61,9 +61,9 @@ body{
 }
 
 /*------------------------------------------------------------------------------
-----------------------SET MAX-WIDTH ON CONTAINERS-------------------------------
+-------------SET MAX-WIDTH ON CONTAINERS & REUSABLE STYLES----------------------
 ------------------------------------------------------------------------------*/
-.container, .header-container{
+.container, .header-container, .promo-container, .main-mob-container{
   max-width: 940px;
   margin: 0 auto;
 }
@@ -76,13 +76,35 @@ body{
 .clearfix{
   overflow: auto;
 }
-
+.overlay{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+}
+.time{
+}
+.time::before{
+  content: "\f017";
+  font-family: FontAwesome;
+  font-size: 1.1rem;
+  color: rgba(249, 206, 1, 1);
+  margin-right: 5px;
+}
+.link{
+}
+.link::before{
+  content: "\f0c1";
+  font-family: FontAwesome;
+  font-size: 1.1rem;
+  margin-right: 5px;
+  color: rgba(73, 75, 73, 1);
+  transform: scale(1, -1);
+  display: inline-block;
+}
 /*------------------------------------------------------------------------------
 ---------------------------------HEADER CSS-------------------------------------
 ------------------------------------------------------------------------------*/
 header{
-  /*background: linear-gradient(rgba(84, 84, 84, 1), rgba(21, 21, 21, 1));*/
-  background-color: darkred;
+  background: linear-gradient(rgba(84, 84, 84, 1), rgba(21, 21, 21, 1));
   color: white;
   text-shadow: 0px 1px 0px black;
   line-height: 3.77rem;
@@ -129,4 +151,206 @@ ul.top-logo li{
 }
 .user-dropdown{
   display: none;
+}
+.disclaimer{
+  color: rgba(120, 120, 120, 1);
+  font-size: .8rem;
+}
+
+/*------------------------------------------------------------------------------
+---------------------------------PROMO CSS--------------------------------------
+------------------------------------------------------------------------------*/
+.promo{
+  background-color: white;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, .5);
+  position: relative;
+  z-index: 2;  /* keep the shadow on top of the next div down (main-mob-background) */
+}
+.promo-container{
+  line-height: 5rem;
+  font-size: 1.9rem;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(65, 65, 65, 1);
+}
+
+/*------------------------------------------------------------------------------
+---------------------------------MAIN MOB CSS-----------------------------------
+------------------------------------------------------------------------------*/
+
+.main-mob-background{
+  background-color: rgba(242, 240, 236, 1);
+  border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+.main-mob-container{
+  padding-top: 10px;
+}
+.main-mob, .main-mob-meta{
+
+}
+.main-mob{
+  width: 66%;
+  margin-right: 1.5%;
+}
+.main-mob-bg{
+  background: url(images/main-mob.jpg) center center;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+.main-mob-header{
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 14%;
+  color: white;
+  vertical-align: middle;
+  line-height: 3rem;
+  padding: 0 20px;
+}
+.main-mob-title{
+
+}
+.main-mob-meta{
+  width: 32%;
+}
+.mob-message{
+  font-weight: bold;
+  line-height: 1.5rem;
+  background: rgba(249, 206, 1, 1);
+  position: absolute;
+  bottom: -1rem;
+  left: -.25rem;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid rgba(202, 144, 2, 1);
+  text-shadow: 0px 1px 0px rgba(202, 144, 2, 1);
+}
+.mob-message::before{
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: rgba(249, 206, 1, 1);
+  bottom: -1px;
+  left: 0;
+}
+.mob-message::after{
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 7px 0;
+  border-color: transparent rgba(249, 206, 1, 1) transparent transparent;
+  position: absolute;
+  bottom: -7px;
+  left: 0px;
+}
+.main-mob-cta{
+  background: rgba(207, 205, 198, 1);
+  padding: 25px 23px 20px 23px;
+  font-style: italic;
+  color: rgba(65, 65, 65, 1);
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+}
+.main-mob-cta::before, .main-mob-cta::after{
+  content: "\"";
+}
+.main-mob-disclaimer{
+  padding: 10px 23px 30px 23px;
+  position: relative;
+}
+.main-mob-disclaimer::before{
+  position: absolute;
+  background: url(images/arrow-icon.png) center center;
+  background-size: cover;
+  position: absolute;
+  top: -17px;
+  left: 6px;
+  content: " ";
+  width: 15px;
+  height: 31px;
+}
+/*------------------------------------------------------------------------------
+----------------------------MAIN MOB META CSS-----------------------------------
+------------------------------------------------------------------------------*/
+.counter{
+  width: 46.3333%;
+  display: inline-block;
+}
+.counter-num{
+  display: block;
+  background-color: rgba(207, 205, 198, 1);
+  padding: 40px 0px 27px 0px;
+  color: white;
+  text-shadow: 0px 1px 1px rgba(122, 122, 122, 1);
+  font-size: 4rem;
+  text-align: center;
+}
+.counter-title{
+  display: block;
+  background-color: rgba(181, 174, 163, 1);
+  padding: 12px 0px;
+  color: rgba(65, 65, 65, 1);
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, .5);
+  font-size: .8rem;
+  text-align: center;
+}
+.join-container{
+  margin-top: 25px;
+}
+.join-container-top{
+  background: linear-gradient(rgba(234, 166, 2, 1), rgba(255, 221, 2, 1));
+  color: white;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+  padding: 20px 0px;
+  text-align: center;
+  border: 1px solid rgba(202, 144, 2, 1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, .5);
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.join-container-bottom{
+  margin: 0px 5px;
+  background: white;
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid rgba(182, 182, 182, 1);
+  padding: 11px 0px 13px 0px;
+}
+.join-container img{
+  margin-left: 3.125%;
+  margin-right: 1.736%;
+}
+.rewards-container{
+  width: 80%;
+}
+.rewards-container span{
+  display: block;
+}
+.reward-one{
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.reward-two{
+  margin-top: 9px;
+  font-size: .8rem;
+}
+.join-container-disclaim{
+  text-align: center;
+  padding: 14px 0 20px 0;
+  border-bottom: 1px solid rgba(177, 177, 177, 1);
+}
+.social-icons{
+  padding-top: 18px;
+}
+.social-icons li{
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: middle;
+}
+.social-icons li a{
+  color: rgba(14, 129, 177, 1);
+  font-size: .7rem;
 }
