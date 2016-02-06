@@ -63,7 +63,8 @@ body{
 /*------------------------------------------------------------------------------
 -------------SET MAX-WIDTH ON CONTAINERS & REUSABLE STYLES----------------------
 ------------------------------------------------------------------------------*/
-.container, .header-container, .promo-container, .main-mob-container{
+.container, .header-container, .promo-container, .main-mob-container,
+.footer-container{
   max-width: 940px;
   margin: 0 auto;
 }
@@ -353,4 +354,228 @@ ul.top-logo li{
 .social-icons li a{
   color: rgba(14, 129, 177, 1);
   font-size: .7rem;
+}
+/*------------------------------------------------------------------------------
+----------------------------OTHER MOBS CSS--------------------------------------
+------------------------------------------------------------------------------*/
+
+.other-mobs-container{
+	padding-top: 38px;
+	padding-bottom: 34px;
+	border-bottom: 1px solid rgba(183, 183, 183, 1);
+}
+.other-mobs{
+	width: 31.9%;
+	margin-right: 2.1%;
+	display: inline-block;
+	float: left;
+}
+.other-mobs:last-child{
+	margin: 0px;
+}
+.other-mob-meta{
+	padding-top: 6px;
+}
+.other-mob-container{
+	width: 72%;
+}
+.other-mob-title{
+	font-weight: bold;
+	font-size: .8rem;
+}
+.other-mob-info{
+	margin-top: 6px;
+	font-size: .7rem;
+	color: rgba(126, 126, 126, 1);
+}
+.clock{
+}
+
+/*------------------------------------------------------------------------------
+----------------------------UPCOMING MOBS CSS-----------------------------------
+------------------------------------------------------------------------------*/
+
+.upcoming-mobs-container{
+	padding-top: 18px;
+}
+.upcoming-mobs{
+	width: 66%;
+}
+.upcoming-mobs h2{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.upcoming-mobs ul{
+	padding-top: 35px;
+}
+.upcoming-mobs li{
+	border-bottom: 1px solid rgba(183, 183, 183, 1);
+	padding: 10px 0px;
+}
+.upcoming-mobs li:last-child{
+	border: none;
+}
+.upcoming-mobs li div{
+	display: inline-block;
+	font-size: .9rem;
+}
+.upcoming-mob{
+	width: 40%;
+	font-weight: bold;
+}
+.upcoming-mob-needed{
+	width: 30%;
+	color: rgba(48, 48, 48, 1);
+}
+.upcoming-mob-needed::after{
+	content: " Mobbers Needed";
+}
+.upcoming-mob-date{
+	width: 27.5%;
+	color: rgba(93, 92, 93, 1);
+	text-align: right;
+}
+.start-a-mob{
+	width: 32%;
+	background-color: rgba(207, 205, 199, 1);
+	text-align: center;
+	padding: 20px 0px 11px 0px;
+}
+.start-title{
+	color: white;
+	text-shadow: 0px 1px 1px rgba(122, 122, 122, 1);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.start-a-mob ol{
+	margin-left: 0;
+	padding-right: 0;
+	margin-top: 50px;
+	position: relative;
+}
+.start-a-mob ol:before{
+	content: " ";
+	border-top: 7px solid rgba(189, 187, 181, 1);
+	position: absolute;
+	top: -26px;
+	left: 0px;
+	width: 66%;
+	margin-left: 17%;
+}
+.start-a-mob li{
+	counter-increment: step-counter;
+	position: relative;
+	display: inline-block;
+	width: 24%;
+	font-size: .6rem;
+	color: rgba(70, 69, 69, 1);
+}
+.start-a-mob li:not(:last-child){
+	margin-right: 5%;
+}
+.start-a-mob li:before{
+	content: counter(step-counter);
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	margin-left: -18px;
+	font-weight: bold;
+	border-radius: 18px;
+	font-size: 1rem;
+	width: 36px;
+	border: 1px solid rgba(169, 166, 162, 1);
+	color: rgba(79, 79, 79, 1);
+	line-height: 2.2rem;
+	vertical-align: middle;
+	background: radial-gradient( white, rgba(212, 212, 212, 1) 90%, rgba(239, 239, 239, 1) );
+	box-shadow: inset 0px 1px 0px rgba(255,255,255, 1), 0px 1px 1px rgba(0, 0, 0, .25);
+}
+.btn-sam{
+	width: 92%;
+	display: block;
+	font-size: 1.2rem;
+	margin: 10px 4% 0px 4%;
+	padding: 20px 0;
+	border-radius: 5px;
+	border: 1px solid rgba(159, 157, 152, 1);
+	background: linear-gradient( rgba(228, 227, 223, 1), rgba(209, 205, 199, 1) );
+	box-shadow: inset 0px 1px 0px rgba(255,255,255, 1), 0px 1px 1px rgba(0, 0, 0, .25);
+	color: rgba(0, 121, 173, 1);
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+/*------------------------------------------------------------------------------
+-----------------------------------FOOTER CSS-----------------------------------
+------------------------------------------------------------------------------*/
+
+footer{
+	margin-top: 58px;
+	padding-top: 21px;
+	background: rgba(82, 82, 82, 1);
+	color: white;
+	text-shadow: 0px 1px 2px black;
+}
+.footer-holder{
+	width: 23.2%;
+	margin-right: 9.6%;
+}
+.footer-holder:first-of-type{
+	width: 31.9%;
+}
+.footer-holder:last-of-type{
+	margin-right: 0;
+}
+.footer-container-title{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.mob-categories ul{
+
+}
+.mob-categories li{
+	display: inline-block;
+	text-align: center;
+	width: 45%;
+	margin-right: 8%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	font-size: .75rem;
+	padding: 10px 0;
+	border: rgba(60, 60, 60, 1);
+	background: rgba(99, 99, 98, 1);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255, .25), 0px 2px 1px rgba(0, 0, 0, .25);
+}
+.mob-categories li:nth-child(even){
+	margin-right: 0;
+}
+.footer-container-text{
+	font-size: .7rem;
+	line-height: .8rem;
+	margin-bottom: 20px;
+}
+
+.connect-with-mobber input, .connect-with-mobber button{
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: 1.75rem;
+	margin: 0;
+	padding: 0;
+	border: none;
+	vertical-align: middle;
+	border: 1px solid rgba(52, 49, 49, 1);
+	box-shadow: inset 0px 2px 3px rgba(0,0,0, .25);
+}
+input[type="email"]{
+	background: rgba(253, 253, 253, 1);
+	border-radius: 5px 0 0 5px;
+	padding-left: 10%;
+	width: 80%;
+	border-right: none;
+}
+button[type="submit"]{
+	width: 20%;
+	color: white;
+	font-size: 1.2rem;
+	background: rgba(157, 157, 157, 1);
+	border-radius: 0 5px 5px 0;
+	border-left: 1px solid rgba(153, 153, 153, 1);
 }
